@@ -107,6 +107,18 @@
   }
 }
 
+/* Ensure verticalPanel is completely hidden on mobile screens */
+@media (max-width: 576px) {
+  .verticalPanel,
+  .verticalPanelContent,
+  .verticalPanelInfo,
+  .verticalPanelTitle {
+    display: none;
+    width: 0;
+    visibility: hidden;
+  }
+}
+
 .verticalPanel {
   z-index: 3;
   height: 100vh;
@@ -178,7 +190,7 @@
   left: 0;
   width: 100%;
   padding: 3.9vmin 0 0;
-  background: #f6f5f3;
+  background: #ffffff;
 }
 
 @media (min-width: 992px) {
@@ -247,7 +259,7 @@
   min-width: 200px;
   opacity: 0;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;
   transition: all 0.3s ease-out;
   list-style: none;
   padding: 0;
@@ -280,7 +292,7 @@
   position: fixed !important;
   z-index: 5;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.95) !important;
+  background-color: #ffffff !important;
   padding: 1.3em 0 0 !important;
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
 }
@@ -386,7 +398,7 @@
 }
 
 .navbarCollapse {
-  background-color: #fff;
+  background-color: #ffffff;
   position: absolute;
   z-index: 30;
   margin-top: 10px;
@@ -454,7 +466,7 @@
   display: none;
   list-style: none;
   padding: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #ffffff;
 }
 
 .navbarNavMobile li.hasSubmenu > a::after {

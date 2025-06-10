@@ -1,0 +1,471 @@
+/* About page styles */
+.aboutContainer {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumbLink {
+  color: #db6766;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbLink:hover {
+  color: #c55a59;
+  text-decoration: underline;
+}
+
+.breadcrumbSeparator {
+  margin: 0 8px;
+  color: #999;
+}
+
+.breadcrumbCurrent {
+  color: #666;
+}
+
+/* Page title */
+.pageTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.pageTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #db6766;
+}
+
+.accentColor {
+  color: #db6766;
+}
+
+.pageSubtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+/* Content sections */
+.contentSection {
+  margin-bottom: 4rem;
+  line-height: 1.8;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.sectionTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #db6766;
+}
+
+/* Two column layout */
+.twoColumnLayout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 4rem 0;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Stats section */
+.statsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.statItem {
+  flex: 1;
+  min-width: 200px;
+  padding: 2rem 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.statNumber {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #db6766;
+  margin-bottom: 0.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.statLabel {
+  color: #333;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Values section */
+.valuesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.valueCard {
+  flex: 1;
+  min-width: 250px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.valueTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.valueIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(219, 103, 102, 0.1);
+  border-radius: 50%;
+  margin-right: 1rem;
+  color: #db6766;
+}
+
+.valueDescription {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Team section */
+.teamContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.teamMember {
+  width: 280px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.teamImageWrapper {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.teamImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.teamImageWrapper:hover .teamImage {
+  transform: scale(1.1);
+}
+
+.teamName {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.teamRole {
+  color: #db6766;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.teamBio {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* CTA section */
+.ctaSection {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.ctaTitle {
+  font-family: 'Oswald', sans-serif;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.ctaText {
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  background-color: #db6766;
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: #c55a59;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 3rem 0;
+  padding: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #eaeaea;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timelineItem {
+  padding: 1rem 0;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timelineItem:nth-child(odd) {
+  left: 0;
+  padding-right: 40px;
+  text-align: right;
+}
+
+.timelineItem:nth-child(even) {
+  left: 50%;
+  padding-left: 40px;
+}
+
+.timelineContent {
+  padding: 1.5rem;
+  background: white;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timelineYear {
+  width: 70px;
+  height: 70px;
+  background: #db6766;
+  border-radius: 50%;
+  position: absolute;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  top: 0;
+}
+
+.timelineItem:nth-child(odd) .timelineYear {
+  right: -35px;
+}
+
+.timelineItem:nth-child(even) .timelineYear {
+  left: -35px;
+}
+
+.timelineTitle {
+  font-family: 'Oswald', sans-serif;
+  margin-top: 0;
+  color: #333;
+}
+
+.timelineText {
+  margin-bottom: 0;
+  color: #666;
+}
+
+/* List styles */
+.valuesList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.valueItem {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.valueItemIcon {
+  min-width: 24px;
+  height: 24px;
+  background-color: #db6766;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-right: 1rem;
+  margin-top: 0.2rem;
+}
+
+.valueItemContent strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .timeline::before {
+    left: 40px;
+  }
+  
+  .timelineItem {
+    width: 100%;
+    padding-left: 80px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+  
+  .timelineItem:nth-child(odd) .timelineYear,
+  .timelineItem:nth-child(even) .timelineYear {
+    left: 5px;
+    right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    padding: 60px 15px;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  
+  .statNumber {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timelineItem {
+    padding-left: 60px !important;
+  }
+  
+  .timelineItem:nth-child(odd) .timelineYear,
+  .timelineItem:nth-child(even) .timelineYear {
+    left: -15px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem;
+  }
+  
+  .valuesList {
+    margin-left: 0;
+  }
+}

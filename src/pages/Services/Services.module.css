@@ -1,0 +1,252 @@
+.servicesContainer {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumbLink {
+  color: #db6766;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbLink:hover {
+  color: #c55a59;
+  text-decoration: underline;
+}
+
+.breadcrumbSeparator {
+  margin: 0 8px;
+  color: #999;
+}
+
+.breadcrumbCurrent {
+  color: #666;
+}
+
+/* Page title */
+.pageTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.accentColor {
+  color: #db6766;
+}
+
+/* Service navigation */
+.serviceNavigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.serviceButton {
+  padding: 12px 20px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.serviceButton:hover {
+  background-color: #e8e8e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activeButton {
+  background-color: #db6766;
+  color: white;
+}
+
+.activeButton:hover {
+  background-color: #c55a59;
+}
+
+/* Content container */
+.contentContainer {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Service image */
+.serviceImage {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6));
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 30px;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+}
+
+/* Section titles */
+.sectionTitle {
+  font-family: 'Oswald', sans-serif;
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Features and benefits lists */
+.featuresList,
+.benefitsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.featuresList li,
+.benefitsList li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+}
+
+.featuresList li:before {
+  content: '✓';
+  color: #db6766;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-weight: bold;
+}
+
+.benefitsList li:before {
+  content: '•';
+  color: #db6766;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.ctaButton {
+  padding: 12px 30px;
+  background-color: #db6766;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.ctaButton:hover {
+  background-color: #c55a59;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .serviceNavigation {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+  
+  .serviceButton {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  
+  .serviceImage {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesContainer {
+    padding: 60px 15px;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .serviceImage {
+    height: 300px;
+  }
+  
+  .imageOverlay {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .serviceNavigation {
+    flex-wrap: nowrap;
+    margin-bottom: 2rem;
+  }
+  
+  .serviceButton {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .serviceImage {
+    height: 200px;
+  }
+  
+  .imageOverlay {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+  
+  .ctaButton {
+    width: 100%;
+  }
+}

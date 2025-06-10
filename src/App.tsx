@@ -4,11 +4,16 @@ import './App.css'
 
 // Layout
 import Layout from './components/Layout/Layout'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 // Pages
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'
+import Industries from './pages/Industries/Industries'
+import ProjectDetails from './pages/Projects/ProjectDetails'
+import AllProjects from './pages/Projects/AllProjects'
+import Services from './pages/Services/Services'
 
 function App() {
   // Initialize smooth scrolling on app load
@@ -44,11 +49,17 @@ function App() {
 
   return (
     <BrowserRouter>
+      {/* ScrollToTop component will scroll the page to top on route changes */}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="industries" element={<Industries />} />
+          <Route path="services" element={<Services />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="projects" element={<AllProjects />} />
+          <Route path="projects/:industryId/:projectId" element={<ProjectDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>

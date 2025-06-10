@@ -71,25 +71,25 @@ const Header = () => {
             <li className={location.pathname === '/about' ? styles.active : ''}>
               <Link to="/about">About us</Link>
             </li>
-            <li>
-              <a href="#industry">Industries</a>
+            <li className={location.pathname === '/industries' ? styles.active : ''}>
+              <Link to="/industries">Industries</Link>
               <ul>
-                <li><a href="#healthcare">Healthcare</a></li>
-                <li><a href="#hospitality">Hospitality</a></li>
-                <li><a href="#office">IT & Office Fitouts</a></li>
-                <li><a href="#factories">Factories & Warehouses</a></li>
-                <li><a href="#water">Water Supply & Sewage Lines</a></li>
+                <li><Link to="/industries#healthcare">Healthcare</Link></li>
+                <li><Link to="/industries#hospitality">Hospitality</Link></li>
+                <li><Link to="/industries#office">IT & Office Fitouts</Link></li>
+                <li><Link to="/industries#factories">Factories & Warehouses</Link></li>
+                <li><Link to="/industries#water">Water Supply & Sewage Lines</Link></li>
               </ul>
             </li>
-            <li>
-              <a href="#services">Services</a>
+            <li className={location.pathname === '/services' ? styles.active : ''}>
+              <Link to="/services">Services</Link>
               <ul>
-                <li><a href="#civil">Civil Works</a></li>
-                <li><a href="#medical">Medical Engineering</a></li>
-                <li><a href="#interiors">Interiors</a></li>
-                <li><a href="#mechanical">Mechanical</a></li>
-                <li><a href="#electrical">Electrical</a></li>
-                <li><a href="#plumbing">Plumbing</a></li>
+                <li><Link to="/services#civil">Civil Works</Link></li>
+                <li><Link to="/services#medical">Medical Engineering</Link></li>
+                <li><Link to="/services#interiors">Interiors</Link></li>
+                <li><Link to="/services#mechanical">Mechanical</Link></li>
+                <li><Link to="/services#electrical">Electrical</Link></li>
+                <li><Link to="/services#plumbing">Plumbing</Link></li>
               </ul>
             </li>
             <li className={location.pathname === '/contact' ? styles.active : ''}>
@@ -122,25 +122,25 @@ const Header = () => {
             <li className={location.pathname === '/about' ? styles.active : ''}>
               <Link to="/about" onClick={handleMobileMenuItemClick}>About us</Link>
             </li>
-            <li className={styles.hasSubmenu}>
-              <a href="#industries">Industries</a>
+            <li className={`${styles.hasSubmenu} ${location.pathname === '/industries' ? styles.active : ''}`}>
+              <Link to="/industries">Industries</Link>
               <ul>
-                <li><a href="#healthcare" onClick={handleMobileMenuItemClick}>Healthcare</a></li>
-                <li><a href="#hospitality" onClick={handleMobileMenuItemClick}>Hospitality</a></li>
-                <li><a href="#office" onClick={handleMobileMenuItemClick}>IT & Office Fitouts</a></li>
-                <li><a href="#factories" onClick={handleMobileMenuItemClick}>Factories & Warehouses</a></li>
-                <li><a href="#water" onClick={handleMobileMenuItemClick}>Water Supply & Sewage Lines</a></li>
+                <li><Link to="/industries#healthcare" onClick={handleMobileMenuItemClick}>Healthcare</Link></li>
+                <li><Link to="/industries#hospitality" onClick={handleMobileMenuItemClick}>Hospitality</Link></li>
+                <li><Link to="/industries#office" onClick={handleMobileMenuItemClick}>IT & Office Fitouts</Link></li>
+                <li><Link to="/industries#factories" onClick={handleMobileMenuItemClick}>Factories & Warehouses</Link></li>
+                <li><Link to="/industries#water" onClick={handleMobileMenuItemClick}>Water Supply & Sewage Lines</Link></li>
               </ul>
             </li>
-            <li className={styles.hasSubmenu}>
-              <a href="#services">Services</a>
+            <li className={`${styles.hasSubmenu} ${location.pathname === '/services' ? styles.active : ''}`}>
+              <Link to="/services">Services</Link>
               <ul>
-                <li><a href="#civil" onClick={handleMobileMenuItemClick}>Civil Works</a></li>
-                <li><a href="#medical" onClick={handleMobileMenuItemClick}>Medical Engineering</a></li>
-                <li><a href="#interiors" onClick={handleMobileMenuItemClick}>Interiors</a></li>
-                <li><a href="#mechanical" onClick={handleMobileMenuItemClick}>Mechanical</a></li>
-                <li><a href="#electrical" onClick={handleMobileMenuItemClick}>Electrical</a></li>
-                <li><a href="#plumbing" onClick={handleMobileMenuItemClick}>Plumbing</a></li>
+                <li><Link to="/services#civil" onClick={handleMobileMenuItemClick}>Civil Works</Link></li>
+                <li><Link to="/services#medical" onClick={handleMobileMenuItemClick}>Medical Engineering</Link></li>
+                <li><Link to="/services#interiors" onClick={handleMobileMenuItemClick}>Interiors</Link></li>
+                <li><Link to="/services#mechanical" onClick={handleMobileMenuItemClick}>Mechanical</Link></li>
+                <li><Link to="/services#electrical" onClick={handleMobileMenuItemClick}>Electrical</Link></li>
+                <li><Link to="/services#plumbing" onClick={handleMobileMenuItemClick}>Plumbing</Link></li>
               </ul>
             </li>
             <li className={location.pathname === '/contact' ? styles.active : ''}>
