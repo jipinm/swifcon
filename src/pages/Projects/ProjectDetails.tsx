@@ -4,11 +4,6 @@ import { motion } from 'framer-motion';
 import { projectsData } from '../Industries/IndustryProjects';
 import styles from './Projects.module.css';
 
-interface ProjectParams {
-  industryId: string;
-  projectId: string;
-}
-
 const ProjectDetails = () => {
   const { industryId, projectId } = useParams<{ industryId: string, projectId: string }>();
   const navigate = useNavigate();

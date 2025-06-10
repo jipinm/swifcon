@@ -124,7 +124,7 @@ const AllProjects = () => {
           >
             All Industries
           </button>
-          {Object.keys(projectsData).map((industry, index) => (
+          {Object.keys(projectsData).map((industry) => (
             <button 
               key={industry}
               className={`${styles.filterButton} ${selectedIndustry === industry ? styles.activeFilter : ''}`}
