@@ -1,0 +1,294 @@
+/* GetInTouch Component Styles */
+.contacts {
+  position: relative;
+  margin-top: 3.1em;
+  margin-bottom: 3.1em;
+}
+
+.section {
+  position: relative;
+  background-color: var(--bg-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sectionHeader {
+  position: relative;
+}
+
+.sectionTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 400;
+  font-size: 1.8em;
+}
+
+.textPrimary {
+  color: #db6766;
+}
+
+.fadeTitleRight {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 10.8em;
+  line-height: 1;
+  color: #000;
+  position: absolute;
+  left: 90%;
+  top: 0.03em;
+  opacity: 0.035;
+  transform: translate(-50%, -50%);
+}
+
+.sectionContent {
+  position: relative;
+}
+
+.rowBase {
+  margin-top: -3em;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.colBase {
+  margin-top: 3em;
+}
+
+.colMd4 {
+  width: 33.333333%;
+  padding: 0 15px;
+}
+
+.colMd8 {
+  width: 66.666667%;
+  padding: 0 15px;
+}
+
+.colAddress {
+  font-size: 1em;
+  line-height: 2.1;
+  margin-top: 2em;
+}
+
+.colAddress .fa {
+  margin-right: 10px;
+  color: #db6766;
+}
+
+.colAddress a {
+  color: #db6766;
+  text-decoration: none;
+}
+
+.colAddress a:hover {
+  color: #3d3d3d;
+}
+
+/* Form Styles */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+  display: none;
+}
+
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.2;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 0.5;
+}
+
+/* Form container styles */
+.jsAjaxForm {
+  display: block;
+}
+
+.rowField {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.colField {
+  padding: 0 5px;
+}
+
+.colSm6 {
+  width: 50%;
+}
+
+.colSm12 {
+  width: 100%;
+}
+
+.formGroup {
+  margin-bottom: 10px;
+}
+
+.formControl {
+  font-size: 1em;
+  height: 3.625em;
+  border-radius: 0.75em;
+  padding-left: 22px;
+  color: #666666;
+  background-color: #f3f3f3;
+  border: 1px solid #f3f3f3;
+  box-shadow: none;
+  appearance: none;
+  transition: all 0.15s;
+  width: 100%;
+  display: block;
+}
+
+.textarea {
+  height: 7.9em;
+  padding-top: 1.1em;
+  resize: none;
+}
+
+.formControl:focus {
+  border-color: #db6766;
+  background-color: #fff;
+  outline: 0;
+  box-shadow: none;
+}
+
+.formControl::placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+.colMessage {
+  display: none;
+  margin-top: 20px;
+}
+
+.successMessage,
+.errorMessage {
+  display: none;
+}
+
+.successMessage.show,
+.errorMessage.show {
+  display: block;
+}
+
+.successMessage {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.errorMessage {
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.successMessage .fa {
+  margin-right: 7px;
+  font-size: 1.5em;
+}
+
+.formSubmit {
+  margin-top: 1.2em;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  display: inline-block;
+  border: 0.2em solid #db6766;
+  border-radius: 30px;
+  padding: 0.5em 1.2em;
+  font-size: 0.875em;
+  color: #fff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #db6766;
+  border: 0;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #fff;
+  background-color: #cc9f6b;
+  box-shadow: none;
+  outline: none;
+}
+
+.btnShadow2 {
+  box-shadow: 0 15px 34px rgba(197, 164, 126, 0.5);
+}
+
+.iconNext {
+  position: relative;
+  top: -0.1em;
+  margin-left: 0.6em;
+  vertical-align: middle;
+  display: inline-block;
+  width: 0.94em;
+  height: 0.75em;
+  background: url('../../assets/images/icons/next.png') 0 0 no-repeat;
+  background-size: 0.94em 0.75em;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .colMd4, .colMd8 {
+    width: 100%;
+  }
+  
+  .textRight {
+    text-align: center;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5em;
+  }
+  
+  .fadeTitleRight {
+    font-size: 6em;
+    left: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .colSm6 {
+    width: 100%;
+  }
+}

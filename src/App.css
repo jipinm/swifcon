@@ -1,0 +1,228 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
+
+/* Global CSS Reset and Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+html {
+  font-size: 75%;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'montserratlight', sans-serif;
+  font-size: 1em;
+  line-height: 1.65;
+  color: #747474;
+  margin: 0;
+  padding: 0;
+}
+
+/* Font Face Definitions to match original */
+@font-face {
+  font-family: 'montserratlight';
+  src: url('../assets/fonts/Montserrat-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserratsemibold';
+  src: url('../assets/fonts/Montserrat-SemiBold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #db6766;
+}
+
+::selection {
+  background-color: #db6766;
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: #db6766;
+  color: #fff;
+}
+
+/* Typography */
+h1, .h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 8vmin;
+  line-height: 1.2;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #3d3d3d;
+}
+
+h2, .h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 2.1875em;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #3d3d3d;
+}
+
+h3, .h3 {
+  font-family: 'montserratsemibold', sans-serif;
+  font-size: 1.875em;
+  line-height: 1.1;
+  font-weight: normal;
+  color: #3d3d3d;
+}
+
+h4, .h4 {
+  font-family: 'montserratsemibold', sans-serif;
+  font-size: 1.125em;
+  line-height: 1.35;
+  font-weight: normal;
+  color: #3d3d3d;
+  letter-spacing: 0.2em;
+}
+
+h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a {
+  color: inherit;
+}
+
+h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1.6em;
+}
+
+b, strong {
+  font-family: 'montserratsemibold', sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color: #db6766;
+  transition: color 0.3s ease-out;
+}
+
+a:hover, a:focus {
+  color: #db6766;
+  outline: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+/* App Container */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Utility Classes */
+.text-primary {
+  color: #db6766;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Page Lines Background */
+.page-lines {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-lines .col-line {
+  padding: 0;
+}
+
+.page-lines .line {
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 50000px;
+  background-color: #f4f4f4;
+}
+
+.page-lines .col-line:last-child .line:last-child {
+  left: auto;
+  right: 0;
+}
+
+/* FontAwesome Icons */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fa-phone:before { content: "\f095"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-home:before { content: "\f015"; }
+.fa-instagram:before { content: "\f16d"; }
+.fa-twitter:before { content: "\f099"; }
+.fa-facebook:before { content: "\f09a"; }
+.fa-check:before { content: "\f00c"; }
+.fa-angle-double-right:before { content: "\f101"; }
+
+/* Media Queries */
+@media (min-width: 768px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 92%;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+}
