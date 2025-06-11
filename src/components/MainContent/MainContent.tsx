@@ -24,7 +24,6 @@ type NewsItem = {
 
 const MainContent = () => {
   // State for data
-  const [textBgUrl, setTextBgUrl] = useState('/assets/images/bg/text-1.jpg');
   const [updateItems, setUpdateItems] = useState<UpdateItem[]>([]);
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
   
@@ -44,9 +43,6 @@ const MainContent = () => {
 
   // Use mock data directly instead of API fetches
   useEffect(() => {
-    // Set the background image directly
-    setTextBgUrl('/assets/images/bg/text-1.jpg');
-    
     // Set update items
     setUpdateItems([
       {
