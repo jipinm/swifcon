@@ -265,7 +265,7 @@
   display: inline-block;
   width: 0.94em;
   height: 0.75em;
-  background: url('../../assets/images/icons/next.png') 0 0 no-repeat;
+  background: url('/assets/images/icons/next.png') 0 0 no-repeat;
   background-size: 0.94em 0.75em;
 }
 

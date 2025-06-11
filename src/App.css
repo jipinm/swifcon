@@ -32,14 +32,14 @@ body {
 /* Font Face Definitions to match original */
 @font-face {
   font-family: 'montserratlight';
-  src: url('../assets/fonts/Montserrat-Light.ttf');
+  src: url('/assets/fonts/Montserrat-Light.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'montserratsemibold';
-  src: url('../assets/fonts/Montserrat-SemiBold.ttf');
+  src: url('/assets/fonts/Montserrat-SemiBold.ttf');
   font-weight: normal;
   font-style: normal;
 }

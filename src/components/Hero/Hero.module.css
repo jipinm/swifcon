@@ -53,7 +53,7 @@
   height: 1em;
   opacity: 0.25;
   transition: all 0.5s;
-  background: url('../../assets/images/icons/prev.png') 0 0 no-repeat;
+  background: url('/assets/images/icons/prev.png') 0 0 no-repeat;
   background-size: 1.3em 1em;
   margin-right: 0.82em;
 }
@@ -66,7 +66,7 @@
   height: 1em;
   opacity: 0.25;
   transition: all 0.5s;
-  background: url('../../assets/images/icons/next.png') 0 0 no-repeat;
+  background: url('/assets/images/icons/next.png') 0 0 no-repeat;
   background-size: 1.3em 1em;
   margin-left: 0.72em;
 }
