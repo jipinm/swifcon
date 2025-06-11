@@ -48,7 +48,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/swifcon">
       {/* ScrollToTop component will scroll the page to top on route changes */}
       <ScrollToTop />
       <Routes>
