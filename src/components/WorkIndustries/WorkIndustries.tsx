@@ -24,33 +24,21 @@ const WorkIndustries = () => {
   
   const industriesY = useTransform(scrollYProgress, [0.3, 0.8], [100, 0]);
 
-  // Fetch data from API or use mock data
+  // Load data directly without API fetch to avoid console errors
   useEffect(() => {
-    // Fetch industries
-    fetch('https://api.example.com/industries')
-      .then(response => response.json())
-      .then(data => setIndustries(data))
-      .catch(error => console.error('Error fetching industries:', error));
+    setIndustries([
+      { imageUrl: '/assets/images/industries/healthcare.svg', name: 'Healthcare' },
+      { imageUrl: '/assets/images/industries/hospitality.svg', name: 'Hospitality' },
+      { imageUrl: '/assets/images/industries/office.svg', name: 'IT & Office Fitouts' },
+      { imageUrl: '/assets/images/industries/residential.jpg', name: 'Residential' },
+      { imageUrl: '/assets/images/industries/commercial.jpg', name: 'Commercial' },
+      { imageUrl: '/assets/images/industries/educational.jpg', name: 'Educational' },
+      { imageUrl: '/assets/images/industries/factories.svg', name: 'Factories' },
+      { imageUrl: '/assets/images/industries/industrial.jpg', name: 'Industrial' },
+      { imageUrl: '/assets/images/industries/warehouses.jpg', name: 'Warehouses' },
+      { imageUrl: '/assets/images/industries/water.svg', name: 'Water Supply & Sewage Lines' }
+    ]);
   }, []);
-
-  // Mock data for development (will be replaced by API responses)
-  useEffect(() => {
-    // If API fails or during development, use this mock data
-    if (industries.length === 0) {
-      setIndustries([
-        { imageUrl: '/images/industries/healthcare.jpg', name: 'Healthcare' },
-        { imageUrl: '/images/industries/hospitality.jpg', name: 'Hospitality' },
-        { imageUrl: '/images/industries/it-office.jpg', name: 'IT & Office Fitouts' },
-        { imageUrl: '/images/industries/residential.jpg', name: 'Residential' },
-        { imageUrl: '/images/industries/commercial.jpg', name: 'Commercial' },
-        { imageUrl: '/images/industries/educational.jpg', name: 'Educational' },
-        { imageUrl: '/images/industries/factories.jpg', name: 'Factories' },
-        { imageUrl: '/images/industries/industrial.jpg', name: 'Industrial' },
-        { imageUrl: '/images/industries/warehouses.jpg', name: 'Warehouses' },
-        { imageUrl: '/images/industries/water-supply.jpg', name: 'Water Supply & Sewage Lines' }
-      ]);
-    }
-  }, [industries]);
 
   return (
     <div ref={contentRef} className={styles.workIndustriesWrapper}>

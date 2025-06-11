@@ -1,0 +1,4 @@
+/* Home.module.css */
+.homeContainer {
+  position: relative; /* This ensures scroll offset is calculated correctly */
+}

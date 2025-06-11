@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 // Layout
@@ -48,7 +48,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter basename="/swifcon">
+    <HashRouter>
       {/* ScrollToTop component will scroll the page to top on route changes */}
       <ScrollToTop />
       <Routes>
@@ -62,7 +62,7 @@ function App() {
           <Route path="projects/:industryId/:projectId" element={<ProjectDetails />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

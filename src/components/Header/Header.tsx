@@ -5,16 +5,10 @@ import styles from './Header.module.css';
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [logoUrl, setLogoUrl] = useState('');
-  const [arrowUrl, setArrowUrl] = useState('');
+  // Use constants instead of state since these values won't change
+  const logoUrl = '/assets/images/logos/logo-icon.png';
+  const arrowUrl = '/assets/images/icons/arrow3.gif';
   const location = useLocation();
-
-  // Set logo and arrow images from public assets folder
-  useEffect(() => {
-    // Use local assets instead of API
-    setLogoUrl('/assets/images/logos/logo-icon.png');
-    setArrowUrl('/assets/images/icons/arrow3.gif');
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

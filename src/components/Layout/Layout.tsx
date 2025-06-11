@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <div className="app">
       <Header />
-      <main>
+      <main style={{ position: 'relative' }}>
         <Outlet />
       </main>
       <GetInTouch />

@@ -3,121 +3,109 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import styles from './MainContent.module.css';
 import MaskedText from '../MaskedText/MaskedText';
 
-// Define types for our data
+// Define types
 type UpdateItem = {
-  imageUrl: string;
+  id: string;
   title: string;
-  description: string;
+  date: string;
+  summary: string;
+  link: string;
+  image: string;
 };
 
 type NewsItem = {
+  id: string;
   title: string;
-  content: string;
+  date: string;
+  summary: string;
+  link: string;
+  image: string;
 };
 
 const MainContent = () => {
+  // State for data
+  const [textBgUrl, setTextBgUrl] = useState('/assets/images/bg/text-1.jpg');
   const [updateItems, setUpdateItems] = useState<UpdateItem[]>([]);
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
-  const [textBgUrl, setTextBgUrl] = useState<string>('');
   
-  // Refs for parallax effects
-  const contentRef = useRef<HTMLDivElement>(null);
+  // Refs for scroll animations
+  const { scrollYProgress } = useScroll();
   const yearsRef = useRef<HTMLDivElement>(null);
   const updatesRef = useRef<HTMLDivElement>(null);
   const newsRef = useRef<HTMLDivElement>(null);
   
-  // Scroll animations
-  const { scrollYProgress } = useScroll({
-    target: contentRef,
-    offset: ['start end', 'end start']
-  });
-  
+  // Animation values
   const yearsScale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1.2]);
   const yearsOpacity = useTransform(scrollYProgress, [0, 0.3], [0.3, 1]);
   const updatesY = useTransform(scrollYProgress, [0, 0.5], [50, 0]);
   const newsY = useTransform(scrollYProgress, [0, 0.5], [50, 0]);
+  
+  // No need to apply background image to yearsRef since MaskedText already has one
 
-  // Use textBgUrl in the component (to fix lint warning)
+  // Use mock data directly instead of API fetches
   useEffect(() => {
-    if (textBgUrl) {
-      console.log('Background image URL loaded:', textBgUrl);
-      // This could be used to set a background image dynamically
-      // For example: document.body.style.backgroundImage = `url(${textBgUrl})`;
-    }
-  }, [textBgUrl]);
-
-  // Fetch data from API
-  useEffect(() => {
-    // Fetch blog updates
-    fetch('https://api.example.com/updates')
-      .then(response => response.json())
-      .then(data => setUpdateItems(data))
-      .catch(error => console.error('Error fetching updates:', error));
-
-    // Fetch news items
-    fetch('https://api.example.com/news')
-      .then(response => response.json())
-      .then(data => setNewsItems(data))
-      .catch(error => console.error('Error fetching news:', error));
-
-
-
-    // Fetch background image
-    fetch('https://api.example.com/backgrounds')
-      .then(response => response.json())
-      .then(data => setTextBgUrl(data.textBg))
-      .catch(error => console.error('Error fetching background:', error));
+    // Set the background image directly
+    setTextBgUrl('/assets/images/bg/text-1.jpg');
+    
+    // Set update items
+    setUpdateItems([
+      {
+        id: '1',
+        title: 'New ISO Certification',
+        date: 'June 5, 2025',
+        summary: 'Swifcon achieves ISO 9001:2018 certification for quality management systems.',
+        link: '/updates/iso-certification',
+        image: '/assets/images/blog/thumb/blog-1.jpg'
+      },
+      {
+        id: '2',
+        title: 'Energy Efficiency Award',
+        date: 'May 22, 2025',
+        summary: 'Our Green Building initiatives win National Energy Conservation Award.',
+        link: '/updates/energy-award',
+        image: '/assets/images/blog/thumb/green-buildings.jpg'
+      },
+      {
+        id: '3',
+        title: 'Virtual Design & Construction',
+        date: 'May 10, 2025',
+        summary: 'Implementing VDC to improve project delivery and reduce waste.',
+        link: '/updates/vdc-implementation',
+        image: '/assets/images/blog/thumb/video-analysis.jpg'
+      }
+    ]);
+    
+    // Set news items
+    setNewsItems([
+      {
+        id: '1',
+        title: 'New Hospital Project',
+        date: 'June 1, 2025',
+        summary: 'Swifcon awarded contract for 500-bed super specialty hospital in Kochi.',
+        link: '/news/hospital-project',
+        image: '/assets/images/blog/thumb/blog-1.jpg'
+      },
+      {
+        id: '2',
+        title: 'BMS Integration',
+        date: 'May 15, 2025',
+        summary: 'Advanced Building Management Systems implementation for corporate clients.',
+        link: '/news/bms-integration',
+        image: '/assets/images/blog/thumb/bms-1.jpg'
+      },
+      {
+        id: '3',
+        title: 'Infrastructure Development',
+        date: 'May 5, 2025',
+        summary: 'Major infrastructure development project in Thiruvananthapuram.',
+        link: '/news/infrastructure-development',
+        image: '/assets/images/blog/thumb/video-analysis.jpg'
+      }
+    ]);
   }, []);
 
-  // Mock data for development (will be replaced by API responses)
-  useEffect(() => {
-    // If API fails or during development, use this mock data
-    if (updateItems.length === 0) {
-      setUpdateItems([
-        {
-          imageUrl: '/assets/images/blog/thumb/blog-1.jpg',
-          title: 'Virtual Design & Construction',
-          description: '"Virtual Construction Design" a disruptive technology wh..'
-        },
-        {
-          imageUrl: '/assets/images/blog/thumb/video-analysis.jpg',
-          title: 'Intelligent Video Analytics',
-          description: 'Our unique solution automatically detects, analyses and clas..'
-        },
-        {
-          imageUrl: '/assets/images/blog/thumb/green-buildings.jpg',
-          title: 'Green Building Concept',
-          description: 'Green buildings are one of the varieties of green living sol..'
-        },
-        {
-          imageUrl: '/assets/images/blog/thumb/bms-1.jpg',
-          title: 'Building Management System',
-          description: 'BMS systems are "Intelligent" microprocessor-based contr..'
-        }
-      ]);
-    }
-
-    if (newsItems.length === 0) {
-      setNewsItems([
-        {
-          title: 'Transparent Aluminum',
-          content: 'For decades, chemical engineers have dreamed of a material that combines the strength and durability of metal with the crystal-clear purity of glass. Such a "clear metal" could be used to construct towering glass-walled skyscrapers that require less internal support. Aluminium oxynitride or AlON is a ceramic composed of aluminium, oxygen and nitrogen. AlON is optically transparent (~80%)'
-        },
-        {
-          title: 'Photovoltaic Glass',
-          content: 'Photovoltaic Glass (PV glass) is a technology that enables the conversion of light into electricity. To do so, the glass incorporates transparent semiconductor-based photovoltaic cells, which are also known as solar cells. The cells are sandwiched between two sheets of glass. Photovoltaic glass is not perfectly transparent but allows some of the available light through. it provides the same thermal and sound insulation, and natural light as a conventional architectural glass.'
-        },
-        {
-          title: 'The Second Coming of Ultrasound',
-          content: 'Researchers are fitting people\'s heads with ultrasound-emitting helmets to treat tremors and Alzheimer\'s. They\'re using it to remotely activate cancer-fighting immune cells. Startups are designing swallowable capsules and ultrasonically vibrating enemas to shoot drugs into the bloodstream. One company is even using the shockwaves to heal wounds'
-        }
-      ]);
-    }
-
-  }, [updateItems, newsItems]);
-
   return (
-    <div className={styles.content} id="contents" ref={contentRef}>
+    <div className={styles.content} id="contents">
       {/* Latest Updates and News Section */}
       <section className={styles.mainSection}>
         <div className={styles.container}>
@@ -149,14 +137,14 @@ const MainContent = () => {
                       >
                         <div className={styles.updateImageWrapper}>
                           <a href="#">
-                            <img alt={item.title} src={item.imageUrl} className={styles.updateImage} />
+                            <img alt={item.title} src={item.image} className={styles.updateImage} />
                           </a>
                         </div>
                         <div className={styles.updateContent}>
                           <h6 className={styles.updateTitle}>
                             <a href="#">{item.title}</a>
                           </h6>
-                          <p className={styles.updateDescription}>{item.description}</p>
+                          <p className={styles.updateDescription}>{item.summary}</p>
                         </div>
                       </motion.article>
                     ))}
@@ -214,7 +202,7 @@ const MainContent = () => {
                             {item.title}
                           </a>
                         </h5>
-                        <p className={styles.newsContent}>{item.content}</p>
+                        <p className={styles.newsContent}>{item.summary}</p>
                       </motion.div>
                     ))}
                   </div>

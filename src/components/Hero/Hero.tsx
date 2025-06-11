@@ -51,52 +51,45 @@ const Hero = () => {
 
   const [slides, setSlides] = useState<Slide[]>([]);
 
-  // Fetch slides from API
+  // Load slides directly without API fetch to avoid console errors
   useEffect(() => {
-    fetch('https://api.example.com/slides')
-      .then(response => response.json())
-      .then(data => setSlides(data))
-      .catch(error => {
-        console.error('Error fetching slides:', error);
-        // Fallback to mock data if API fails
-        setSlides([
-          {
-            imageUrl: '/assets/images/slider/slide1.jpg',
-            title: 'Infrastructure Development',
-            subtitle: 'Doing the best for a growing Economy'
-          },
-          {
-            imageUrl: '/assets/images/slider/slide2.jpg',
-            title: 'Medical Engineering',
-            subtitle: 'The best partner for constructing a healthy nation'
-          },
-          {
-            imageUrl: '/assets/images/slider/slide3.jpg',
-            title: 'Interiors of Commercial Spaces',
-            subtitle: 'Comfort and Aesthetics Blended for those who work'
-          },
-          {
-            imageUrl: '/assets/images/slider/slide4.jpg',
-            title: 'Steel Structures',
-            subtitle: 'Strong, Fast & Eco friendly Structures'
-          },
-          {
-            imageUrl: '/assets/images/slider/slide5.jpg',
-            title: 'Turnkey Projects',
-            subtitle: 'Your trusted Partner'
-          },
-          {
-            imageUrl: '/assets/images/slider/slide6.jpg',
-            title: 'Industrial Pipelines',
-            subtitle: 'Industrial Pipe lines'
-          },
-          {
-            imageUrl: '/assets/images/slider/slide7.jpg',
-            title: 'Green Buildings',
-            subtitle: 'Eco friendly and energy saving buildings'
-          }
-        ]);
-      });
+    setSlides([
+      {
+        imageUrl: '/assets/images/slider/slide1.jpg',
+        title: 'Infrastructure Development',
+        subtitle: 'Doing the best for a growing Economy'
+      },
+      {
+        imageUrl: '/assets/images/slider/slide2.jpg',
+        title: 'Medical Engineering',
+        subtitle: 'The best partner for constructing a healthy nation'
+      },
+      {
+        imageUrl: '/assets/images/slider/slide3.jpg',
+        title: 'Interiors of Commercial Spaces',
+        subtitle: 'Comfort and Aesthetics Blended for those who work'
+      },
+      {
+        imageUrl: '/assets/images/slider/slide4.jpg',
+        title: 'Steel Structures',
+        subtitle: 'Strong, Fast & Eco friendly Structures'
+      },
+      {
+        imageUrl: '/assets/images/slider/slide5.jpg',
+        title: 'Turnkey Projects',
+        subtitle: 'Your trusted Partner'
+      },
+      {
+        imageUrl: '/assets/images/slider/slide6.jpg',
+        title: 'Industrial Pipelines',
+        subtitle: 'Industrial Pipe lines'
+      },
+      {
+        imageUrl: '/assets/images/slider/slide7.jpg',
+        title: 'Green Buildings',
+        subtitle: 'Eco friendly and energy saving buildings'
+      }
+    ]);
   }, []);
 
   // Initialize the slider
